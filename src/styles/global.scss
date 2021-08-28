@@ -1,0 +1,35 @@
+:root {
+  font-family: "Mulish", sans-serif;
+  --color-black: #252525;
+  --color-blue: #2f80ed;
+  --color-gray1: #333333;
+  --color-gray2: #4f4f4f;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: var(--color-gray1);
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 36px;
+  color: var(--color-black);
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: normal;
+  color: var(--color-black);
+}
