@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 414px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 26px;
+  transition: all 1800ms ease-out;
+  transition-delay: 800ms;
+}
+
+.subtitle {
+  font-size: 24px;
+  transition: all 1800ms ease-out;
+  transition-delay: 800ms;
+  line-height: 30px;
+}
+
+.containerScaleDown {
+  .title {
+    // this scale will make font-size: 36px
+    transform: scale(0.375);
+    transform-origin: 50% 40%;
+  }
+  .subtitle {
+    // this scale will make font-size: 12px
+    transform: translateY(-55px) scale(calc(1 / 2));
+  }
+}
+
+.containerMoveUp {
+  .title {
+    transform: translateY(-450px) scale(0.375);
+  }
+  .subtitle {
+    transform: translateY(-505px) scale(calc(1 / 2));
+  }
+}
