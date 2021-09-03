@@ -5,3 +5,125 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+.vieMed {
+  width: 972px;
+  // height: 440px;
+  image-rendering: high-quality;
+  transition: all 1800ms ease-out;
+  transition-delay: 800ms;
+}
+
+.transitionable {
+  transition: all 1800ms ease-out;
+  transition-delay: 800ms;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 414px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 26px;
+  transition: all 1800ms ease-out;
+  line-height: 120px;
+  transition-delay: 800ms;
+}
+
+.subtitle {
+  font-size: 24px;
+  transition: all 1800ms ease-out;
+  transition-delay: 800ms;
+  line-height: 30px;
+}
+
+// ----------Case Studies
+.caseStudy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 118px;
+  width: 1211px;
+  div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 464px;
+
+    h3 {
+      color: var(--color-black);
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 144%;
+    }
+
+    a {
+      margin-top: 62px;
+      align-self: flex-end;
+    }
+  }
+
+  img {
+    width: 670px;
+    margin-right: 77px;
+  }
+}
+
+.caseStudies {
+  transform: translateY(55%);
+}
+
+.viemedCase {
+  div {
+    padding-top: 61px;
+  }
+}
+
+.signCase {
+  div {
+    padding-top: 26px;
+  }
+}
+
+// ----------- Transitional classes
+
+.scaleDown {
+  & > * {
+    .title {
+      // this scale will make font-size: 36px
+      transform: scale(0.375);
+      transform-origin: 50% 40%;
+    }
+    .subtitle {
+      // this scale will make font-size: 12px
+      transform: translateY(-72px) scale(calc(1 / 2));
+    }
+  }
+
+  .caseStudies {
+    .caseStudy.viemedCase {
+      img {
+        transform: translateY(-140px);
+        // background-color: aqua;
+      }
+    }
+  }
+}
+
+.moveUp > * {
+  .title {
+    transform: translateY(-450px) scale(0.375);
+  }
+  .subtitle {
+    transform: translateY(-505px) scale(calc(1 / 2));
+  }
+}
